@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: "VotingApp"
+  datasource:
+    url: jdbc:postgresql://${DB_URL:localhost}:5432/dev
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:root}
+    hikari:
+      schema: votingapp
+
+
+  flyway:
+    url: jdbc:postgresql://${DB_URL:localhost}:5432/dev
+    user: ${DB_USerNAME:postgres}
+    password: ${DB_PASSWORD:root}
+    schemas: votingapp
